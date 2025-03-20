@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/docker-vue.iml" filepath="$PROJECT_DIR$/.idea/docker-vue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ff.iml" filepath="$PROJECT_DIR$/.idea/ff.iml" />
     </modules>
   </component>
 </project>
