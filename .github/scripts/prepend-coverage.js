@@ -3,29 +3,25 @@
 const fs = require('fs');
 const path = require('path');
 
-const coverageFilePath = path.join(__dirname, '../../App/coverage.txt');
-const readmePath = path.join(__dirname, '../../readme.md');
+const workspace = process.env.GITHUB_WORKSPACE;
+// workspace = /home/runner/work/<repo>/<repo>
 
+const coverageFilePath = path.join(workspace, 'App/coverage.txt');
+const readmePath = path.join(workspace, 'readme.md');
 
-// 1. Leggi la coverage
-let coverageTxt;
 try {
-    coverageTxt = fs.readFileSync(coverageFilePath, 'utf-8');
-} catch (error) {
-    console.error('Errore nella lettura di coverage.txt:', error);
-    process.exit(1);
-}
+    // Leggo la coverage
+    const coverageTxt = fs.readFileSync(coverageFilePath, 'utf-8');
 
-// 2. Leggi il README
-let readmeContent = fs.readFileSync(readmePath, 'utf-8');
+    // Leggo il readme
+    let readmeContent = fs.readFileSync(readmePath, 'utf-8');
 
-// 3. Rimuovi eventuale blocco coverage precedente
-//    Usiamo un commento speciale: <!-- COVERAGE-START --> ... <!-- COVERAGE-END -->
-const coverageBlockRegex = /<!-- COVERAGE-START -->([\s\S]*?)<!-- COVERAGE-END -->/;
-readmeContent = readmeContent.replace(coverageBlockRegex, '').trim();
+    // Rimuovo l'eventuale blocco coverage precedente
+    const coverageBlockRegex = /<!-- COVERAGE-START -->([\s\S]*?)<!-- COVERAGE-END -->/;
+    readmeContent = readmeContent.replace(coverageBlockRegex, '').trim();
 
-// 4. Crea il blocco coverage
-const newCoverageBlock = `
+    // Creo il nuovo blocco coverage
+    const newCoverageBlock = `
 <!-- COVERAGE-START -->
 \`\`\`
 ${coverageTxt.trim()}
@@ -33,9 +29,13 @@ ${coverageTxt.trim()}
 <!-- COVERAGE-END -->
 `.trim();
 
-// 5. Prependi al README
-const newReadme = `${newCoverageBlock}\n\n${readmeContent}\n`;
+    // Prepend all’inizio del file
+    const newReadme = `${newCoverageBlock}\n\n${readmeContent}\n`;
 
-// 6. Scrivi sul file README
-fs.writeFileSync(readmePath, newReadme, 'utf-8');
-console.log('README aggiornato con la nuova copertura test!');
+    // Sovrascrivo
+    fs.writeFileSync(readmePath, newReadme, 'utf-8');
+    console.log('readme.md aggiornato con la nuova copertura test!');
+} catch (error) {
+    console.error('Errore nella gestione del file:', error);
+    process.exit(1);
+}

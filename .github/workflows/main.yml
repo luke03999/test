@@ -13,27 +13,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Installa dipendenze
         run: |
           cd App
           npm install
 
-      - name: Run coverage
+      - name: Esegui coverage
         run: |
           cd App
-          # Il seguente comando genera la coverage in console e la reindirizza su coverage.txt
-          npm run test:coverage > coverage.txt
+          # Vitest scrive il report su stdout in formato "text"
+          # e lo reindirizziamo in coverage.txt
+          npx vitest --coverage > coverage.txt
 
-      - name: Prepend coverage into README
-        run: |
-          node .github/scripts/prepend-coverage.js
+      - name: Prepend coverage to readme
+        # lanciamo lo script di Node
+        run: node .github/scripts/prepend-coverage.js
 
-      - name: Commit changes
+      - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Aggiorna coverage in README [skip ci]" || echo "Nessuna modifica da commitare"
+          git add readme.md
+          git commit -m "Aggiorna coverage in readme [skip ci]" || echo "Nessuna modifica"
           git push
-        # ^ Se non ci sono differenze reali, la commit fallisce
-        #   e va in "|| echo" così non interrompi il workflow.
