@@ -3,29 +3,29 @@
 [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90m/home/runner/work/test/test/App[39m
       [2mCoverage enabled with [22m[33mv8[39m
 
- [32m✓[39m src/tests/views/DomandeView.test.js [2m([22m[2m7 tests[22m[2m)[22m[90m 124[2mms[22m[39m
- [32m✓[39m src/tests/views/ModificaDomanda.test.js [2m([22m[2m5 tests[22m[2m)[22m[90m 78[2mms[22m[39m
- [32m✓[39m src/tests/views/TestView.test.js [2m([22m[2m4 tests[22m[2m)[22m[90m 66[2mms[22m[39m
- [32m✓[39m src/tests/components/Test.test.js [2m([22m[2m3 tests[22m[2m)[22m[90m 44[2mms[22m[39m
- [32m✓[39m src/tests/views/Home.test.js [2m([22m[2m6 tests[22m[2m)[22m[90m 61[2mms[22m[39m
+ [32m✓[39m src/tests/views/DomandeView.test.js [2m([22m[2m7 tests[22m[2m)[22m[90m 104[2mms[22m[39m
+ [32m✓[39m src/tests/views/ModificaDomanda.test.js [2m([22m[2m5 tests[22m[2m)[22m[90m 68[2mms[22m[39m
+ [32m✓[39m src/tests/views/TestView.test.js [2m([22m[2m4 tests[22m[2m)[22m[90m 65[2mms[22m[39m
+ [32m✓[39m src/tests/components/Test.test.js [2m([22m[2m3 tests[22m[2m)[22m[90m 60[2mms[22m[39m
+ [32m✓[39m src/tests/views/Home.test.js [2m([22m[2m6 tests[22m[2m)[22m[90m 67[2mms[22m[39m
 [90mstdout[2m | src/tests/views/AggiungiDomanda.test.js[2m > [22m[2mAggiungiDomanda.vue[2m > [22m[2mcalls submitForm and navigates to "/questions" on form submission
 [22m[39mForm inviato con: Test question Test answer
 
- [32m✓[39m src/tests/views/AggiungiDomanda.test.js [2m([22m[2m3 tests[22m[2m)[22m[90m 78[2mms[22m[39m
+ [32m✓[39m src/tests/views/AggiungiDomanda.test.js [2m([22m[2m3 tests[22m[2m)[22m[90m 63[2mms[22m[39m
  [32m✓[39m src/tests/components/Navbar.test.js [2m([22m[2m4 tests[22m[2m)[22m[90m 24[2mms[22m[39m
 [90mstdout[2m | src/tests/components/Domanda.test.js[2m > [22m[2mDomanda.vue[2m > [22m[2mal click sull'icona, chiama editQuestion e naviga correttamente
 [22m[39m[33m42[39m
 [33m42[39m
 
- [32m✓[39m src/tests/components/Domanda.test.js [2m([22m[2m2 tests[22m[2m)[22m[90m 60[2mms[22m[39m
- [32m✓[39m src/tests/App.test.js [2m([22m[2m1 test[22m[2m)[22m[90m 37[2mms[22m[39m
- [32m✓[39m src/tests/main.test.js [2m([22m[2m1 test[22m[2m)[22m[33m 435[2mms[22m[39m
-   [33m[2m✓[22m[39m main.js[2m > [22mmounts the app on #app [33m409[2mms[22m[39m
+ [32m✓[39m src/tests/components/Domanda.test.js [2m([22m[2m2 tests[22m[2m)[22m[90m 52[2mms[22m[39m
+ [32m✓[39m src/tests/App.test.js [2m([22m[2m1 test[22m[2m)[22m[90m 40[2mms[22m[39m
+ [32m✓[39m src/tests/main.test.js [2m([22m[2m1 test[22m[2m)[22m[33m 406[2mms[22m[39m
+   [33m[2m✓[22m[39m main.js[2m > [22mmounts the app on #app [33m381[2mms[22m[39m
 
 [2m Test Files [22m [1m[32m10 passed[39m[22m[90m (10)[39m
 [2m      Tests [22m [1m[32m36 passed[39m[22m[90m (36)[39m
-[2m   Start at [22m 10:03:18
-[2m   Duration [22m 12.01s[2m (transform 965ms, setup 0ms, collect 3.51s, tests 1.01s, environment 4.42s, prepare 715ms)[22m
+[2m   Start at [22m 10:10:07
+[2m   Duration [22m 11.95s[2m (transform 953ms, setup 0ms, collect 3.50s, tests 950ms, environment 4.47s, prepare 715ms)[22m
 
 [34m % [39m[2mCoverage report from [22m[33mv8[39m
 -------------------|---------|----------|---------|---------|-------------------
