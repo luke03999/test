@@ -1,5 +1,5 @@
 <!-- COVERAGE-START -->
-Coverage Totale: **98.36%**
+Coverage Totale: **11.79%**
 <!-- COVERAGE-END -->
 
 # Avvio dell'Applicazione Vue.js e Test con Docker e Node.js
