@@ -13,7 +13,10 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     coverage: {
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'json', 'html', 'lcov'], // Assicurati che 'lcov' sia incluso
+      reportsDirectory: './coverage', // Specifica la cartella di output
+      all: true, // Include tutti i file, anche quelli non testati
+      exclude: ['node_modules', 'dist'], // Esclude test ed elementi inutili
     },
   },
   resolve: {
