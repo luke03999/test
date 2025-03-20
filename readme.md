@@ -1,3 +1,7 @@
+<!-- COVERAGE-START -->
+Coverage Totale: **98.36%**
+<!-- COVERAGE-END -->
+
 # Avvio dell'Applicazione Vue.js e Test con Docker e Node.js
 
 Guida su come avviare l'applicazione, eseguire test e visualizzare i report di coverage del codice utilizzando Docker o Node.js.
