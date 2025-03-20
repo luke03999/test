@@ -149,3 +149,12 @@ open coverage/index.html
 | Linux                 | `xdg-open coverage/index.html` | Apre il report di coverage.                     | [`App/coverage/index.html`](./App/coverage/index.html)               |
 | Windows               | `start coverage\index.html`   | Apre il report di coverage.                     | [`App/coverage/index.html`](./App/coverage/index.html)               |
 | MacOS                 | `open coverage/index.html`     | Apre il report di coverage.                     | [`App/coverage/index.html`](./App/coverage/index.html)               |
+## Code Coverage Report
+```json
+{
+  "statements": null,
+  "branches": null,
+  "functions": null,
+  "lines": null
+}
+```
