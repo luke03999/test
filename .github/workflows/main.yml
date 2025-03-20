@@ -31,10 +31,10 @@ jobs:
         working-directory: App
         run: |
           echo "## Code Coverage Report" > coverage-summary.md
+          echo '```json' >> coverage-summary.md
+          jq '.total | {statements, branches, functions, lines}' coverage/coverage-final.json | tee -a coverage-summary.md
           echo '```' >> coverage-summary.md
-          tail -n +2 coverage/lcov-report/text-summary.txt >> coverage-summary.md
-          echo '```' >> coverage-summary.md
-          mv coverage-summary.md ../coverage-summary.md  # Sposta il file fuori dalla cartella App
+          mv coverage-summary.md ../coverage-summary.md
 
       - name: Update README.md
         run: |
