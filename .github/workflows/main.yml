@@ -1,0 +1,51 @@
+name: Test Coverage Report
+
+on:
+  push:
+    branches:
+      - main  # Cambia se necessario
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: App/package-lock.json # Indica la posizione corretta
+
+      - name: Install Dependencies
+        working-directory: App
+        run: npm install
+
+      - name: Run Tests and Generate Coverage
+        working-directory: App
+        run: npm run test:coverage
+
+      - name: Extract Coverage Summary
+        working-directory: App
+        run: |
+          echo "## Code Coverage Report" > coverage-summary.md
+          echo '```' >> coverage-summary.md
+          tail -n +2 coverage/lcov-report/text-summary.txt >> coverage-summary.md
+          echo '```' >> coverage-summary.md
+          mv coverage-summary.md ../coverage-summary.md  # Sposta il file fuori dalla cartella App
+
+      - name: Update README.md
+        run: |
+          awk '/## Code Coverage Report/{flag=1; next} /##/{flag=0} !flag' readme.md > temp.md
+          cat coverage-summary.md >> temp.md
+          mv temp.md readme.md
+
+      - name: Commit and Push Coverage Update
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add readme.md
+          git commit -m "Update code coverage report [skip ci]" || echo "No changes to commit"
+          git push
