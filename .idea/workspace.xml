@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d30f8a0-cdee-4841-bd2a-1fff2b20922c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/scripts/prepend-coverage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/update-readme-coverage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/docker-vue.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/scripts/prepend-coverage.js" beforeDir="false" afterPath="$PROJECT_DIR$/.github/scripts/prepend-coverage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742463970102</updated>
-      <workItem from="1742463972032" duration="505000" />
+      <workItem from="1742463972032" duration="696000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const coverageFilePath = path.join(__dirname, '../../App/coverage.txt');
-const readmePath = path.join(__dirname, '../../README.md');
+const readmePath = path.join(__dirname, '../../readme.md');
+
 
 // 1. Leggi la coverage
 let coverageTxt;
